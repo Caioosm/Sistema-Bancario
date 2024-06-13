@@ -37,9 +37,9 @@ public class Banco {
         
     //Método de sobrecargas com o objetivo de abrir a conta com um depósito inicial
     public ContaBancaria abrirConta(Cliente cliente, TipoConta tipo, Double depositoInicial){
+        ContaBancaria conta = null;
         int idade = cliente.getIdade();
         int numero = contas.size() + 1;
-        ContaBancaria conta = null;
 
         if(tipo.getDescricao().equals("Corrente")){
             if(idade >= 18){

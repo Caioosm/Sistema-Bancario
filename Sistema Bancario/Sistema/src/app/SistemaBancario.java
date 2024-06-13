@@ -6,11 +6,11 @@ import java.time.LocalDate;
 
 public class SistemaBancario {
     public static void main(String[] args) throws Exception {
-        Banco banco = new Banco("Meu Banco");
+        Banco banco = new Banco("Caixa Economica");
 
         //instanciação de clientes
         Cliente cliente1 = new Cliente("João Silva", "123456789", LocalDate.of(2000, 5, 20));
-        Cliente cliente2 = new Cliente("Maria Sousa", "9876543210", LocalDate.of(2019, 7, 15));
+        Cliente cliente2 = new Cliente("Maria Sousa", "9876543210", LocalDate.of(2009, 7, 15));
 
 
         banco.novoCliente(cliente1);
@@ -30,7 +30,7 @@ public class SistemaBancario {
         ((ContaPoupanca) contaPoupanca).rendimento();
 
         banco.realizarTransferencia(contaCorrente, contaPoupanca, 80.0);
-
+        System.out.println("---------------Dados Atualizados---------------");
         //Contas atualizadas após a operação
         banco.listarContas();
     }
